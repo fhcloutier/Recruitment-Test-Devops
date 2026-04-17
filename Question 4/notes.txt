@@ -1,0 +1,4 @@
+To secure secrets in a real pipeline, you could use the ADO pipeline variables directly, marked as secret.
+The way I am used to is using Azure Key Vault integration and using RBAC for access. 
+This way, if a secret needs to be changed or validated (looking at you API keys), only user with the restricted access are able to.
+One the best way is using PIM to gain temporary access to a role when needed.

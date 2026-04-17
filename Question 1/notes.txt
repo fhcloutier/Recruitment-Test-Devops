@@ -1,0 +1,7 @@
+I created a TaxableItem class inheriting the abstract Item class to implement a common version of the getFullPrice function, as all 3 items would have the same.
+
+I then created the three classes, Table, Paddle and Balls, each with their own default price and weight. 
+
+I added them to the list, using Enumerable.Repeat for items with multiple entries to reduce code duplication.
+
+I overrided the ToString() method in the abstract Item class, since even if the getFullPrice() method is implemented in a different way in another Class (ex: NonTaxableItem), the display of name + price should be consistent.
