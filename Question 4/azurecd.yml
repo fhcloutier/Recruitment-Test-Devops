@@ -4,7 +4,7 @@ trigger:
       - main
 
 variables:
-  imageName: 'ghcr.io/REPOSITORY_NAME/mssql'
+  imageName: 'ghcr.io/fhcloutier/mssql'
   tag: '2019-latest'
 
 stages:
