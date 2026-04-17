@@ -1,0 +1,9 @@
+PS C:\Git\Recruitment-Test-Devops\Question 2> .\Question_2.ps1
+
+AlbumId AlbumTitle                               PhotoCount
+------- ----------                               ----------
+      1 quidem molestiae enim                            50
+      2 sunt qui excepturi placeat culpa                 50
+      3 omnis laborum odio                               50
+      4 non esse culpa molestiae omnis sed optio         50
+      5 eaque aut omnis a                                50

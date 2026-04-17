@@ -1,0 +1,33 @@
+trigger:
+  branches:
+    include:
+      - main
+
+variables:
+  imageName: 'ghcr.io/REPOSITORY_NAME/mssql'
+  tag: '2019-latest'
+
+stages:
+- stage: BuildAndPush
+  displayName: Build and Push Docker Image
+  jobs:
+  - job: Build
+    displayName: Build Image
+    pool:
+      vmImage: 'ubuntu-latest'
+
+    steps:
+    - checkout: self
+
+    - script: |
+        echo "Logging into GHCR"
+        echo $(GHCR_PAT) | docker login ghcr.io -u $(GHCR_USERNAME) --password-stdin
+      displayName: Docker Login
+
+    - script: |
+        docker build -t $(imageName):$(tag) .
+      displayName: Build Image
+
+    - script: |
+        docker push $(imageName):$(tag)
+      displayName: Push Image
